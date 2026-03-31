@@ -2,9 +2,9 @@ const express = require("express");
 const sessionRouter = require("./routes/sessionRoutes");
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger/swagger-output.json");
-const { swaggerOptions } = require("./swagger/swagger");
 
 const cors = require("cors");
+const { SwaggerTheme, SwaggerThemeNameEnum } = require("swagger-themes");
 
 const app = express();
 
@@ -19,6 +19,13 @@ app.use(
 );
 
 app.use(express.json());
+
+const theme = new SwaggerTheme();
+
+swaggerOptions = {
+  explorer: true,
+  customCss: theme.getBuffer(SwaggerThemeNameEnum.DRACULA),
+}
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile, swaggerOptions));
 

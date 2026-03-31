@@ -1,4 +1,4 @@
-const { SwaggerTheme, SwaggerThemeNameEnum } = require("swagger-themes");
+// https://swagger-autogen.github.io/docs/endpoints/
 
 const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
@@ -16,19 +16,7 @@ const doc = {
   ],
 };
 
-const theme = new SwaggerTheme();
-
-const swaggerOptions = {
-  explorer: true,
-  customCss: theme.getBuffer(SwaggerThemeNameEnum.DRACULA),
-};
-
 // const doc = {
-//   info: {
-//     version: "1.0.0",
-//     title: "My API",
-//     description: "Some description...",
-//   },
 //   servers: [
 //     {
 //       url: "http://localhost:3000",
@@ -75,5 +63,3 @@ const endpointsFiles = ["../routes/sessionRoutes.js"];
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
   require("../index");
 });
-
-module.exports = swaggerOptions;

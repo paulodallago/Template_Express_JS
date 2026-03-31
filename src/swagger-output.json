@@ -13,7 +13,6 @@
   "paths": {
     "/session": {
       "get": {
-        "summary": "getAllSessions",
         "description": "",
         "responses": {
           "200": {
@@ -25,7 +24,10 @@
         }
       },
       "post": {
-        "summary": "addSession",
+        "tags": [
+          "Session"
+        ],
+        "summary": "Refresh token",
         "description": "",
         "responses": {
           "201": {
@@ -53,7 +55,6 @@
     },
     "/session/{id}": {
       "get": {
-        "summary": "getSessionById",
         "description": "",
         "parameters": [
           {
@@ -75,7 +76,6 @@
         }
       },
       "put": {
-        "summary": "refreshToken",
         "description": "",
         "parameters": [
           {
@@ -97,7 +97,6 @@
         }
       },
       "delete": {
-        "summary": "deleteSession",
         "description": "",
         "parameters": [
           {

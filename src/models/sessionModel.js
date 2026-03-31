@@ -4,7 +4,7 @@ const sequelize = require("../db");
 const Session = sequelize.define(
   "tbl_sessions",
   {
-    id_session: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
