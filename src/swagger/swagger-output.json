@@ -2,18 +2,18 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Lyceum API",
-    "description": "Rest API docs for a prototype app."
+    "title": "API para aluguel de carros",
+    "description": "API para a disciplina de Serviços Web"
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "http://localhost:undefined"
     }
   ],
   "paths": {
-    "/session": {
+    "/pessoa": {
       "get": {
-        "summary": "getAllSessions",
+        "summary": "getAllPessoas",
         "description": "",
         "responses": {
           "200": {
@@ -25,7 +25,7 @@
         }
       },
       "post": {
-        "summary": "addSession",
+        "summary": "addPessoa",
         "description": "",
         "responses": {
           "201": {
@@ -41,7 +41,16 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "hostName": {
+                  "nome": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "senha": {
+                    "example": "any"
+                  },
+                  "cpf": {
                     "example": "any"
                   }
                 }
@@ -51,9 +60,9 @@
         }
       }
     },
-    "/session/{id}": {
+    "/pessoa/{id}": {
       "get": {
-        "summary": "getSessionById",
+        "summary": "getPessoaById",
         "description": "",
         "parameters": [
           {
@@ -69,35 +78,13 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "put": {
-        "summary": "refreshToken",
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "404": {
+            "description": "Not Found"
           }
         }
       },
       "delete": {
-        "summary": "deleteSession",
+        "summary": "deletePessoa",
         "description": "",
         "parameters": [
           {
