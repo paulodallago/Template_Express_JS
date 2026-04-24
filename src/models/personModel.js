@@ -1,25 +1,25 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db");
 
-const Pessoa = sequelize.define(
-  "tbl_pessoas",
+const Person = sequelize.define(
+  "tbl_persons",
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    nome: {
+    name: {
       type: DataTypes.STRING, allowNull: false
     },
     email: {
       type: DataTypes.STRING, allowNull: false
     },
-    senha: {
+    password: {
       type: DataTypes.STRING, allowNull: false
     },
-    cpf: {
-      type: DataTypes.STRING, allowNull: false
+    age: {
+      type: DataTypes.INTEGER, allowNull: false
     }
   },
   {
@@ -27,4 +27,4 @@ const Pessoa = sequelize.define(
   }
 );
 
-module.exports = Pessoa;
+module.exports = Person;

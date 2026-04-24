@@ -1,0 +1,362 @@
+{
+  "info": {
+    "_postman_id": "e106810d-f67a-4602-a275-3343e7d82d86",
+    "name": "Lyceum",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26767611"
+  },
+  "item": [
+    {
+      "name": "Session",
+      "item": [
+        {
+          "name": "AddSession",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"host\": 14\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/session",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAllSessions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/session",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetSessionById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/session/6",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteSession",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/session/6",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RefreshToken",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/session/refresh/7",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session",
+                "refresh",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CloseSession",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/session/close/7",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "session",
+                "close",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Person",
+      "item": [
+        {
+          "name": "GetAllPersons",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/person",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "person"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetPersonById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/person/12",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "person",
+                "12"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "AddPerson",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Paulo\",\n    \"age\": 21,\n    \"email\": \"paulo@gmail.com\",\n    \"password\": \"senha\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/person",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "person"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeletePerson",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/person/13",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "person",
+                "13"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdatePerson",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Jorge\",\n    \"age\": 18,\n    \"email\": \"johnjorge@example.com\",\n    \"password\": \"senha123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/person/14",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "person",
+                "14"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"paulo@gmail.com\",\r\n    \"password\": \"senha\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
